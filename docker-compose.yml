@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  proxy:
+    image: index.html
+    build:
+      context: .
+    ports:
+      - "30000:80"
+    networks:
+      - networksite
+
+networks: 
+  networksite:
+    driver: bridge
